@@ -1,0 +1,20 @@
+.sidebar {
+    display: block;
+
+    ul {
+        list-style: none;
+        position:fixed;
+        top: 40%;
+
+        li {
+            font-size: 30px;
+            padding-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .sidebar {
+        display: none;
+    }
+}
