@@ -4,7 +4,7 @@
     ul {
         list-style: none;
         position:fixed;
-        top: 40%;
+        bottom: 30vh;
 
         li {
             font-size: 30px;
@@ -13,7 +13,7 @@
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .sidebar {
         display: none;
     }

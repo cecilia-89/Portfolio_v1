@@ -1,5 +1,5 @@
 .about {
-    padding: 5% 5% 0 11%;
+    padding: 8% 5% 0 11%;
     display:flex;
 
     .about-wrapper {
@@ -18,29 +18,48 @@
             font-size: 1.3em;
         }
 
+        div:nth-child(4) {
+            img {
+                max-width: 300px;
+                border-radius: 150px;
+                float:right;
+                shape-outside: circle();
+                margin-left:7em;
+            }
+        }
+
         div:last-child {
             margin-top: .8em;
-    
             font-weight: 600;
             font-size: 1.2em;
+            text-align: justify;
         }
     }
 
-    & > div:nth-child(2) {
-        align-self: center;
-
-        img {
-            max-width: 300px;
-            border-radius: 150px;
-            float:right
-        }
-    }
+    // & > div:nth-child(2) {
+    //     img {
+    //         max-width: 300px;
+    //     }
+    // }
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .about {
         padding-left: 1.5em;
         display:block;
+
+        .about-wrapper {
+
+            div:nth-child(4) {
+                display:flex;
+                justify-content: center;
+                img {
+                   float:none;
+                   margin:2em 0 1em 0;
+                   border-radius: 10px;
+                }
+            }
+        }
     }
 }

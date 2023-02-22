@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
+import Contact from './components/Contact/contact.js'
+import Projects from './components/Projects/projects'
 import Navbar from './components/Navbar/navbar.js'
 import Sidebar from './components/Sidebar/sidebar.js'
 import Footer from './components/Footer/footer.js'
@@ -13,6 +15,8 @@ root.render(
     <Navbar />
     <Sidebar />
     <About />
+    <Projects />
+    <Contact />
     <Footer />
   </React.StrictMode>
 );

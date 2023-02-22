@@ -1,0 +1,22 @@
+.projects {
+    padding:10% 5% 0 11%;
+
+    & > div:first-child {
+        font-weight: bold;
+        display: flex;
+        font-size: 1.5em;
+    }
+
+    .project-wrapper {
+
+        div {
+            border-radius: 10px;
+            background:red;
+
+            img {
+                max-width:300px;
+                justify-self: center;
+            }
+        }
+    }
+}
