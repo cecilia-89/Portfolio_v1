@@ -12,22 +12,32 @@ header {
             width: 100%;
             justify-content: flex-end;
             display:flex;
+
+            div {
+                cursor: pointer;
+            }
+
         }
 
         .resume {
             border: 1px solid black;
             margin: .6em 0 .6em 2em;
-            padding:.6em
+            padding:.6em;
+            cursor: pointer;
         }
 
-        .hamburger {
+        .hamburger, .menu{
             display: none;
             width: 100%;
             justify-content: flex-end;
         }
+
+        .menu {
+            padding-right:8%;
+        }
     }
 
-    .dropdown {
+    .dropdown, .hidden {
         background: red;
         position: absolute;
         display: none;
@@ -36,15 +46,21 @@ header {
         height:100vh;
         z-index:1;
         right:0;
-        width: 40%;
+        width: 50%;
 
         nav {
             line-height: 9vh;
+
+            div {
+                cursor: pointer
+            }
         }
 
         .resume {
             border: 1px solid black;
-            margin: 15% 20% 0 20%;
+            margin: 10% 35% 0 35%;
+            padding: 5px;
+            cursor: pointer;
             line-height: 5vh;
         }
     }
@@ -57,10 +73,7 @@ header {
       .wrapper {
         padding: 1em 2em;
 
-        nav {
-            display: none;
-        }
-        .resume {
+        nav, .resume{
             display: none;
         }
 
@@ -68,20 +81,26 @@ header {
             display: flex
         }
 
+        .hamburger:hover {
+            cursor: pointer
+        }
+
       }
 
       .dropdown {
         display: none
+      }
+
+      .hidden {
+        display: block;
       }
     }
 }
 
 @media (max-width: 250px) {
     header {
-        .dropdown {
             .resume {
                 font-size: 15px;
             }
         }
-    }
 }

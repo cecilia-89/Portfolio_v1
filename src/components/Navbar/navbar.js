@@ -1,10 +1,20 @@
 import { faHamburger } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
+import About from '../About/about.js'
 import './navbar.scss'
 
 const Navbar = () => {
+
+    const [state, setState] = useState(() => {
+        return true;
+    })
+
+    const isVisible = () => setState(!state);
+
     return (
-        <header>
+        <>
+            <header>
             <div className='wrapper'>
                 <div className='logo'>
                     Logo
@@ -17,12 +27,12 @@ const Navbar = () => {
                 <div className="resume">
                     <span>Resume</span>
                 </div>
-                <div className='hamburger'>
+                <div className='hamburger' onClick={isVisible}>
                     <FontAwesomeIcon icon={faHamburger} />
                 </div>
             </div>
 
-            <div className='dropdown'>
+            <div className={state ? 'dropdown' : 'hidden'}>
                 <nav>
                     <div>About</div>
                     <div>Projects</div>
@@ -32,7 +42,9 @@ const Navbar = () => {
                     <span>Resume</span>
                 </div>
             </div>
-        </header>
+            </header>
+            <About visible={state}/>
+        </>
     )
 }
 

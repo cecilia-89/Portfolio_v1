@@ -1,9 +1,19 @@
 import './about.scss'
 import Pic from './images/undraw_learning_sketching_nd4f.svg'
+import Projects from '../Projects/projects';
+import Contact from '../Contact/contact';
+import { useEffect } from 'react';
 
-const About = () => {
+const About = ({visible}) => {
+
+    useEffect(() => {
+        if (visible) {
+            document.body.style.overflowY = 'unset'
+        } else {document.body.style.overflowY = 'hidden'}
+    })
     return (
-        <article className='about'>
+        <div className={visible ? 'container' : 'blur'}>
+            <article className='about'>
             <div className='about-wrapper'>
                 <div>Hello, my name is</div>
                 <div>Cecilia Atabong </div>
@@ -20,6 +30,9 @@ const About = () => {
                 working on these projects.<br/>Feel free to check out a few of my blog posts</div>
             </div>
         </article>
+        <Projects />
+        <Contact />
+        </div>
      );
 }
 

@@ -1,65 +1,77 @@
-.about {
-    padding: 8% 5% 0 11%;
-    display:flex;
+.container, .blur {
+    padding-left: 10%;
 
-    .about-wrapper {
-
-        div:first-child {
-            color: rgb(126, 39, 39);
-            font-weight: 500;
-        }
-        div:nth-child(2) {
-            font-size: 3em;
-            font-weight: bold;
-        }
-        div:nth-child(3) {
-            color:rgb(4, 77, 77);
-            font-weight: bold;
-            font-size: 1.3em;
-        }
-
-        div:nth-child(4) {
-            img {
-                max-width: 300px;
-                border-radius: 150px;
-                float:right;
-                shape-outside: circle();
-                margin-left:7em;
-            }
-        }
-
-        div:last-child {
-            margin-top: .8em;
-            font-weight: 600;
-            font-size: 1.2em;
-            text-align: justify;
-        }
-    }
-
-    // & > div:nth-child(2) {
-    //     img {
-    //         max-width: 300px;
-    //     }
-    // }
-
-}
-
-@media (max-width: 768px) {
     .about {
-        padding-left: 1.5em;
-        display:block;
+        padding: 8% 5% 0 0;
+        display:flex;
 
         .about-wrapper {
 
+            div:first-child {
+                color: rgb(126, 39, 39);
+                font-weight: 500;
+            }
+            div:nth-child(2) {
+                font-size: 3em;
+                font-weight: bold;
+            }
+            div:nth-child(3) {
+                color:rgb(4, 77, 77);
+                font-weight: bold;
+                font-size: 1.3em;
+            }
+
             div:nth-child(4) {
-                display:flex;
-                justify-content: center;
                 img {
-                   float:none;
-                   margin:2em 0 1em 0;
-                   border-radius: 10px;
+
+                    max-width: 300px;
+                    border-radius: 150px;
+                    float:right;
+                    shape-outside: circle();
+                    margin-left:7em;
+                }
+            }
+
+            div:last-child {
+                margin-top: .8em;
+                font-weight: 600;
+                font-size: 1.2em;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.hidden {
+    overflow: hidden;
+  }
+
+
+@media (max-width: 768px) {
+    .container, .blur{
+        padding: 0 5% 0 5%;
+
+        .about {
+            display:block;
+            padding-right:0;
+
+            .about-wrapper {
+                div:nth-child(4) {
+                    display:flex;
+                    justify-content: center;
+                    img {
+                       float:none;
+                       border-radius: 0;
+                       shape-outside: none;
+                       margin: 5% 0 5% 0;
+                    }
                 }
             }
         }
+    }
+
+
+    .blur {
+        filter: blur(5px) brightness(0.5);
     }
 }
