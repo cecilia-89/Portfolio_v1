@@ -1,22 +1,108 @@
+@use '../../index.scss';
+
 .projects {
-    padding:10% 5% 0 0;
+
+   margin-top: 5em;
 
     & > div:first-child {
         font-weight: bold;
+        color: index.$secondary-color;
         display: flex;
-        font-size: 1.5em;
+        font-family: teko;
+        font-size: 3em;
+    }
+
+    & > div:first-child::after {
+        content: "";
+        max-width: 20em;
+        width: 15em;
+        height: 1px;
+        margin: auto 30px;
+        background: index.$slate;
     }
 
     .project-wrapper {
+        
+        &>* {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2em;
+    
+            div:first-child {
+                translate: 0 85px;
+                width: 26em;
+                height: 17em;
+                margin-right: -100px;
+                position: relative;
+                border-radius: 10px;
 
-        div {
-            border-radius: 10px;
-            background:red;
 
-            img {
-                max-width:300px;
-                justify-self: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: inherit;
+                    display: block;
+                }
+
+            }
+
+            div:first-child::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                border-radius: inherit;
+                background: rgba(52, 58, 227, 0.295);
+                width: 100%;
+                height: 100%;
+            }
+
+            .logos {
+                margin-left: -13.5em;
+                margin-bottom: .2em;
+                display: flex;
+                gap: 11px;
+                font-size: 2em;
+            }
+
+            div:last-child {
+                background: rgba(81, 81, 181, 0.637);
+                padding: 20px 25px;
+                width: fit-content;
+
+                h4 {
+                    margin: 0;
+                    font-size: 1.5em;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                    gap: 10px;
+                }
+                
             }
         }
+
+        &>div:nth-child(even) {
+
+            div:first-child {
+                margin-left: -110px;
+                margin-right: 0;
+            }
+
+            .logos {
+                margin-right: -13em;
+                margin-left: 0;
+            }
+
+
+            div:last-child {
+                text-align: right;
+            }
+        }
+
+       
     }
 }

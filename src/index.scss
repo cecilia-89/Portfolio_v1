@@ -1,28 +1,18 @@
-$primary-colour: green;
+$primary-color: #0a192f;
+$secondary-color: #a8b2d1;
+$slate: #8892b0;
+$green: #64ffda;
+$opacity-green: #64ffdb77;
+$lightest-slate: #ccd6f6;
 
-@import  'animate.css';
 
-@font-face {
-  font-family: 'kanit';
-  src: url('./fonts/Kanit-Light.ttf') format('ttf');
+:root {
+  overflow-x: hidden;
 }
-
-@font-face {
-  font-family: 'prompt';
-  src: url('./fonts/Prompt-ExtraLight.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'laBelle';
-  src: url('./fonts/LaBelleAurore-Regular.ttf  ') format('ttf');
-}
-
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: kanit, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

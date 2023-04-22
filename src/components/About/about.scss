@@ -1,43 +1,90 @@
+@use '../../index.scss';
+
 .container, .blur {
-    padding-left: 10%;
+    padding: 0 95px;
+    background-color:index.$primary-color;
+    z-index: -2;
+    position: relative;
 
-    .about {
-        padding: 8% 5% 0 0;
-        display:flex;
+    article:first-child {
+        width: inherit;
+       
+        .about {
+            padding-top: 6em;
+            margin-bottom: 2.5em;
 
-        .about-wrapper {
-
-            div:first-child {
-                color: rgb(126, 39, 39);
-                font-weight: 500;
-            }
-            div:nth-child(2) {
-                font-size: 3em;
-                font-weight: bold;
-            }
-            div:nth-child(3) {
-                color:rgb(4, 77, 77);
-                font-weight: bold;
-                font-size: 1.3em;
-            }
-
-            div:nth-child(4) {
-                img {
-
-                    max-width: 300px;
-                    border-radius: 150px;
-                    float:right;
-                    shape-outside: circle();
-                    margin-left:7em;
+            align-items: center;
+            display:grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+    
+            .about-wrapper {
+                padding-top: 2em;
+                
+                h2 {
+                    color: index.$slate;
+                    font-family: kanit;
+                    font-size: 1.8em;
+                    margin: 0;
                 }
+                h1 {
+                    font-size: 3.2em;
+                    font-family: teko, 'sans-serif';
+                    font-weight: 900;
+                    margin:0;
+                    color: index.$lightest-slate;
+                    line-height: 1.4em;
+                }
+
+                p {
+                    max-width: 40vw;
+                    text-align: left;
+                    color:index.$secondary-color;
+                }
+
+            }
+    
+            .image-wrapper::before {
+                content: " ";
+                position: absolute;
+                top:0;
+                right: 0;
+                display: block;
+                height: inherit;
+                width: inherit;
+                background:  index.$opacity-green;
             }
 
-            div:last-child {
-                margin-top: .8em;
-                font-weight: 600;
-                font-size: 1.2em;
-                text-align: justify;
-            }
+            .image-wrapper {
+              
+                position: relative;
+                width:  13.334em;
+                height: 15.67em;
+                display: flex;
+    
+                    img {
+                        width: inherit;
+                        height: inherit;
+                        object-fit: cover;
+                    }
+                }
+    
+                .image-wrapper::after {
+                    content: " ";
+                    position: absolute;
+
+                    z-index: -1;
+                    top:10px;
+                    right: -18px;
+                    display: block;
+                    height: inherit;
+                    width: inherit;
+                    border: 2px solid index.$green;
+                }
+        }
+        
+        div:last-child {
+            color: index.$secondary-color;
         }
     }
 }
@@ -46,26 +93,41 @@
     overflow: hidden;
   }
 
+@media (max-width: 1024px) {
+    article:first-child .about .about-wrapper div:nth-of-type(1) > * {
+        font-size: .5em;
+    }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container, .blur{
-        padding: 0 5% 0 5%;
+        padding: 0 5%;
 
-        .about {
-            display:block;
-            padding-right:0;
+        article:first-child {
+        
+            .about {
+                display:block;
+                padding-right:0;
 
-            .about-wrapper {
-                div:nth-child(4) {
-                    display:flex;
-                    justify-content: center;
-                    img {
-                       float:none;
-                       border-radius: 0;
-                       shape-outside: none;
-                       margin: 5% 0 5% 0;
+                .about-wrapper {
+
+                    div:nth-of-type(1) {
+                        display:none;
                     }
+
+                    p {
+                        max-width: none;
+                    }
+    
                 }
+
+                .image-wrapper {
+                    margin: 20px auto 40px;
+                }
+            }
+
+            div:last-child {
+                width: 100%;
             }
         }
     }

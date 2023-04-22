@@ -1,16 +1,26 @@
+@use '../../index.scss';
+
 header {
-    background: pink;
-    position: relative;
+    color: index.$secondary-color;
+    background: index.$primary-color;
+    transition: .3s;
+    overflow-x: hidden;
+    width: 100%;
+    z-index: 5;
+    position: fixed;
 
     .wrapper {
-        padding: 0 2em 0 2em;
+        padding: .7em 2em;
         display:flex;
         align-items: center;
 
         nav {
-            gap: 1em;
+            gap: 1.5em;
             width: 100%;
-            justify-content: flex-end;
+            font-size: 1.3em;
+            font-family: teko, 'sans-serif';
+            color: index.$secondary-color;
+            justify-content: center;
             display:flex;
 
             div {
@@ -20,46 +30,55 @@ header {
         }
 
         .resume {
-            border: 1px solid black;
-            margin: .6em 0 .6em 2em;
-            padding:.6em;
+            border: 1px solid index.$green;
+            color: index.$green;
+            padding:.5em .8em;
             cursor: pointer;
         }
 
-        .hamburger, .menu{
+        .hamburger{
             display: none;
             width: 100%;
             justify-content: flex-end;
-        }
 
-        .menu {
-            padding-right:8%;
+            ion-icon {
+                font-size: 1.6em;
+            }
         }
     }
 
     .dropdown, .hidden {
         background: red;
-        position: absolute;
+        position: fixed;
+        z-index: 1;
         display: none;
+        top: 0;
+        transition: .4s;
         text-align:center;
         padding: 20% 0;
-        height:100vh;
-        z-index:1;
+        height:100%;
         right:0;
-        width: 50%;
+        width: 60%;
+
+        &>div:first-child {
+            position: absolute;
+            cursor: pointer;
+            top: 10px;
+            right: 12px;
+        }
 
         nav {
-            line-height: 9vh;
-
+            height: 100%
             div {
                 cursor: pointer
             }
         }
 
         .resume {
-            border: 1px solid black;
-            margin: 10% 35% 0 35%;
-            padding: 5px;
+            border: 1px solid index.$green;
+            color: index.$green;
+            width: fit-content;
+            padding: 4px 10px;
             cursor: pointer;
             line-height: 5vh;
         }
@@ -67,7 +86,7 @@ header {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     header {
       .wrapper {
@@ -92,7 +111,16 @@ header {
       }
 
       .hidden {
-        display: block;
+        display: flex;
+        justify-content: center;
+        
+        &>nav {
+            line-height: 8vh;
+
+            .resume {
+                margin-top: 20px;
+            }
+        }
       }
     }
 }

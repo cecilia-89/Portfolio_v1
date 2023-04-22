@@ -9,6 +9,7 @@ const Sidebar = () => {
                 <li><FontAwesomeIcon icon={faGithub} /></li>
                 <li><FontAwesomeIcon icon={faTwitter} /></li>
                 <li><FontAwesomeIcon icon={faLinkedin} /></li>
+                <li><ion-icon name="mail-outline"></ion-icon></li>
             </ul>
         </div>
     );
