@@ -12,18 +12,14 @@ const Projects = () => {
                     <div>
                         <img src={chatt} alt='movie site for Nigerian movies'/>
                     </div>
-                    <div className='logos'>
-                     <ion-icon name="open-outline"></ion-icon>
-                     <ion-icon name="logo-github"></ion-icon>
-                    </div>
 
                     <div>
                         <h4>Chatt</h4>
-                        <span>An instant messaging web app where you can chat with friends and loved ones.
+                        <div>An instant messaging web app where you can chat with friends and loved ones.
                         For our final project in the ALX program, I and my partner decided to use a MERN stack to build
                         a real time messaging app. We chose the MERN stack because we wanted to use the technologies we learnt 
                         during the course of the program. However, we had to incoporate a third party service in other to make the 
-                        database real time.</span>
+                        database real time.</div>
                         <ul>
                             <li>MongoDB</li>
                             <li>Redis</li>
@@ -34,6 +30,10 @@ const Projects = () => {
                             <li>SCSS</li>
                             <li>Socket.io</li>
                         </ul>
+                        <div className='logos'>
+                            <ion-icon name="open-outline"></ion-icon>
+                            <ion-icon name="logo-github"></ion-icon>
+                        </div>
                     </div>
                 </div>
 
@@ -42,20 +42,20 @@ const Projects = () => {
                         <img src={inventory} alt='movie site for Nigerian movies'/>
                     </div>
 
-                    <div className='logos'>
-                     <ion-icon name="open-outline"></ion-icon>
-                     <ion-icon name="logo-github"></ion-icon>
-                    </div>
-
                     <div>
                         <h4> Inventory app</h4>
-                        <span>This app is intended for business owners to keep track of their stock levels in real-time, which in avoiding stockouts and overstocking, and allows business owners to make informed decisions about restocking and ordering.</span>
+                        <div>This app is intended for business owners to keep track of their stock levels in real-time, which in avoiding stockouts and overstocking, and allows business owners to make informed decisions about restocking and ordering.</div>
                         <ul>
                             <li>Tailwind Css</li>
                             <li>Django</li>
                             <li>React</li>
                             <li>GSAP</li>
                         </ul>
+
+                        <div className='logos'>
+                            <ion-icon name="open-outline"></ion-icon>
+                            <ion-icon name="logo-github"></ion-icon>
+                        </div>
                     </div>
                 </div>
 

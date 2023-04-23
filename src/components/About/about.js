@@ -2,19 +2,18 @@ import './about.scss'
 import Projects from '../Projects/projects';
 import Contact from '../Contact/contact';
 import { useEffect } from 'react';
-import IMG from '../About/images/IMG_8563.JPG'
-import doodle from '../About/images/doodles.svg'
-import dots from '../About/images/Dots.svg'
+import IMG from '../About/images/IMG_8563.JPG';
+import doodle from '../About/images/Rectangl7.svg';
 
-const About = ({visible}) => {
+const About = () => {
 
-    useEffect(() => {
-        if (visible) {
-            document.body.style.overflowY = 'unset'
-        } else {document.body.style.overflowY = 'hidden'}
-    })
+    // useEffect(() => {
+    //     if (visible) {
+    //         document.body.style.overflowY = 'unset'
+    //     } else {document.body.style.overflowY = 'hidden'}
+    // })
     return (
-        <div className={visible ? 'container' : 'blur'}>
+        <div className='container'>
             <article>
                 <div className='about'>
                     <div className='about-wrapper'>
@@ -25,8 +24,9 @@ const About = ({visible}) => {
                         </p> 
                             {/* implementing great user experiences in an intuitive manner */}
                     </div>
+                    
                     <div className='image-wrapper'>
-                        <img src={IMG} alt="cecilia"></img>
+                        <img src={doodle} alt="cecilia"></img>
                     </div>
                 </div>
 
@@ -45,8 +45,8 @@ const About = ({visible}) => {
                     </p>   
                 </div>
             </article>
-        <Projects />
-        <Contact />
+        {/* <Projects /> */}
+        {/* <Contact /> */}
         </div>
      );
 }

@@ -1,23 +1,20 @@
 @use '../../index.scss';
 
-.container, .blur {
+.container {
     padding: 0 95px;
     background-color:index.$primary-color;
-    z-index: -2;
     position: relative;
+    height: 100vh;
 
     article:first-child {
-        width: inherit;
-       
+        margin: auto 0;
+        
         .about {
-            padding-top: 6em;
-            margin-bottom: 2.5em;
-
             align-items: center;
             display:grid;
             grid-template-columns: 2fr 1fr;
             gap: 30px;
-    
+
             .about-wrapper {
                 padding-top: 2em;
                 
@@ -100,7 +97,7 @@
 }
 
 @media (max-width: 767px) {
-    .container, .blur{
+    .container {
         padding: 0 5%;
 
         article:first-child {
@@ -132,8 +129,4 @@
         }
     }
 
-
-    .blur {
-        filter: blur(5px) brightness(0.5);
-    }
 }

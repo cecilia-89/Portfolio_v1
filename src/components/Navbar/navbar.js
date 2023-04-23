@@ -4,10 +4,10 @@ import './navbar.scss'
 
 const Navbar = () => {
 
-    const [state, setState] = useState(() => { return true;})
+    // const [state, setState] = useState(() => { return true;})
     let [lastScroll, setScroll] = useState()
 
-    const isVisible = () => setState(!state);
+    // const isVisible = () => setState(!state);
     const nav = useRef()
 
     // hides navbar on scrollUp and displays on scrollDown
@@ -30,20 +30,16 @@ const Navbar = () => {
                 <div className='logo'>
                     Logo
                 </div>
-                <nav>
-                    <div>About</div>
-                    <div>Projects</div>
-                    <div>Contact</div>
-                </nav>
+               
                 <div className="resume">
-                    <span>Resume</span>
+                    <span> My Resume</span>
                 </div>
-                <div className='hamburger' onClick={isVisible}>
+                {/* <div className='hamburger' onClick={isVisible}>
                     <ion-icon  name="menu-sharp"></ion-icon>
-                </div>
+                </div> */}
             </div>
 
-            <div className={state ? 'dropdown' : 'hidden'}>
+            {/* <div className={state ? 'dropdown' : 'hidden'}>
                 <div onClick={() => setState(!state)}>
                     <ion-icon name="close-outline"></ion-icon>
                 </div>
@@ -54,9 +50,10 @@ const Navbar = () => {
                     <div className="resume">Resume</div>
                 </nav>
                
-            </div>
+            </div> */}
         </header>
-            <About visible={state}/>
+            {/* visible={state} */}
+            <About /> 
         </>
     )
 }

@@ -5,30 +5,19 @@ header {
     background: index.$primary-color;
     transition: .3s;
     overflow-x: hidden;
+    display:flex;
+    align-items: center;
     width: 100%;
     z-index: 5;
     position: fixed;
 
     .wrapper {
         padding: .7em 2em;
-        display:flex;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
         align-items: center;
-
-        nav {
-            gap: 1.5em;
-            width: 100%;
-            font-size: 1.3em;
-            font-family: teko, 'sans-serif';
-            color: index.$secondary-color;
-            justify-content: center;
-            display:flex;
-
-            div {
-                cursor: pointer;
-            }
-
-        }
-
+    
         .resume {
             border: 1px solid index.$green;
             color: index.$green;
@@ -36,53 +25,44 @@ header {
             cursor: pointer;
         }
 
-        .hamburger{
-            display: none;
-            width: 100%;
-            justify-content: flex-end;
-
-            ion-icon {
-                font-size: 1.6em;
-            }
-        }
     }
 
-    .dropdown, .hidden {
-        background: red;
-        position: fixed;
-        z-index: 1;
-        display: none;
-        top: 0;
-        transition: .4s;
-        text-align:center;
-        padding: 20% 0;
-        height:100%;
-        right:0;
-        width: 60%;
+    // .dropdown, .hidden {
+    //     background: red;
+    //     position: fixed;
+    //     z-index: 1;
+    //     display: none;
+    //     top: 0;
+    //     transition: .4s;
+    //     text-align:center;
+    //     padding: 20% 0;
+    //     height:100%;
+    //     right:0;
+    //     width: 60%;
 
-        &>div:first-child {
-            position: absolute;
-            cursor: pointer;
-            top: 10px;
-            right: 12px;
-        }
+    //     &>div:first-child {
+    //         position: absolute;
+    //         cursor: pointer;
+    //         top: 10px;
+    //         right: 12px;
+    //     }
 
-        nav {
-            height: 100%
-            div {
-                cursor: pointer
-            }
-        }
+    //     nav {
+    //         height: 100%
+    //         div {
+    //             cursor: pointer
+    //         }
+    //     }
 
-        .resume {
-            border: 1px solid index.$green;
-            color: index.$green;
-            width: fit-content;
-            padding: 4px 10px;
-            cursor: pointer;
-            line-height: 5vh;
-        }
-    }
+    //     .resume {
+    //         border: 1px solid index.$green;
+    //         color: index.$green;
+    //         width: fit-content;
+    //         padding: 4px 10px;
+    //         cursor: pointer;
+    //         line-height: 5vh;
+    //     }
+    // }
 
 }
 
