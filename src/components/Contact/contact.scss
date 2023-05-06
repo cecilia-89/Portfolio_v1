@@ -1,0 +1,108 @@
+@use '../../index.scss';
+
+.contact-wrapper {
+
+    padding: 5em 1em;
+    border-top: 1px solid rgba(0, 0, 0, 0.142);
+
+    &>div:first-child {
+
+        span {
+            font-size: 2.7em;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    .form  {
+        width: 100%;
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .inputs {
+
+               display: flex;
+               gap: 40px;
+               flex-direction: column;
+
+                &>* {
+                    border-bottom: 1px solid black;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    input {
+                        outline: none;
+                        width:inherit ;
+                        background: index.$primary-color;
+                        border: 0;
+                        padding: 0;
+                        height: 5vh; 
+                    }
+                }
+            }
+
+            &>div:nth-child(2) {
+
+                textarea {
+                    height: 12vh;
+                    width: inherit;
+                    background: index.$primary-color;
+                    border: none;
+                    outline: none;
+                    resize: none;
+                }
+                
+                border-bottom: 1px solid black;
+                width: 100%;
+            }
+
+            &>div:last-child {
+                text-align: center;
+                margin-top: .5em;
+
+                button {
+                    outline: 0;
+                    padding: 1.2em;
+                    background: index.$primary-color;
+                    border: 1px solid black;
+                    width: 9em;
+                    transition: 0.30s;
+                }
+
+                button:hover {
+                    color: white;
+                    cursor: pointer;
+                    background: black;
+                }
+            }
+        
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .contact-wrapper {
+        display: flex;
+        gap: 50px;
+        margin: auto;
+        position: relative;
+
+        .form form {
+
+           .inputs {
+                flex-direction: row;
+           }
+        }
+    }    
+}

@@ -17,6 +17,10 @@ header {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+
+        .logo:hover {
+            cursor: pointer;
+        }
     
         .resume {
             border: 1px solid index.$green;
@@ -26,44 +30,6 @@ header {
         }
 
     }
-
-    // .dropdown, .hidden {
-    //     background: red;
-    //     position: fixed;
-    //     z-index: 1;
-    //     display: none;
-    //     top: 0;
-    //     transition: .4s;
-    //     text-align:center;
-    //     padding: 20% 0;
-    //     height:100%;
-    //     right:0;
-    //     width: 60%;
-
-    //     &>div:first-child {
-    //         position: absolute;
-    //         cursor: pointer;
-    //         top: 10px;
-    //         right: 12px;
-    //     }
-
-    //     nav {
-    //         height: 100%
-    //         div {
-    //             cursor: pointer
-    //         }
-    //     }
-
-    //     .resume {
-    //         border: 1px solid index.$green;
-    //         color: index.$green;
-    //         width: fit-content;
-    //         padding: 4px 10px;
-    //         cursor: pointer;
-    //         line-height: 5vh;
-    //     }
-    // }
-
 }
 
 @media (max-width: 767px) {
@@ -71,36 +37,6 @@ header {
     header {
       .wrapper {
         padding: 1em 2em;
-
-        nav, .resume{
-            display: none;
-        }
-
-        .hamburger {
-            display: flex
-        }
-
-        .hamburger:hover {
-            cursor: pointer
-        }
-
-      }
-
-      .dropdown {
-        display: none
-      }
-
-      .hidden {
-        display: flex;
-        justify-content: center;
-        
-        &>nav {
-            line-height: 8vh;
-
-            .resume {
-                margin-top: 20px;
-            }
-        }
       }
     }
 }
