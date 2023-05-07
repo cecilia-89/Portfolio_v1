@@ -44,8 +44,8 @@ const Navbar = () => {
                         Logo
                     </div>
                
-                    <div className="resume">
-                        <span> My Resume</span>
+                    <div className="resume" >
+                        <a href='resume.pdf' target="_blank" rel="noreferrer"> Resume </a>
                     </div>
                 </div>
             </header>

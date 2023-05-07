@@ -15,9 +15,9 @@ const Projects = () => {
         console.log(swipeRight)
        
         if (swipeRight) {
-            gsap.fromTo(projects.current, {opacity: 0 , x: '100vw'}, {opacity: 1, x:'0',  display: 'block', duration: 1})
+            gsap.fromTo(projects.current, {x: '100vw'}, {x:'0',  display: 'block', duration: .7})
         } else {
-            gsap.fromTo(projects.current, {opacity: 1 , x: '0'}, {opacity: 0, x:'100vw', display: 'none', duration: 1})
+            gsap.fromTo(projects.current, {x: '0'}, {x:'100vw', display: 'none', duration: .7})
         }
 
     }, [swipeRight]) 

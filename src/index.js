@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar/sidebar.js'
 import reportWebVitals from './reportWebVitals';
 import { allReducers } from './reducers/index'
 import { createStore, applyMiddleware } from 'redux';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import thunk from 'redux-thunk';
 import { Provider} from 'react-redux';
 
@@ -16,8 +17,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Navbar />
-      <Sidebar />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<><Navbar /><Sidebar/></>}/>
+        </Routes>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>);
 

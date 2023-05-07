@@ -27,6 +27,11 @@ header {
             color: index.$green;
             padding:.5em .8em;
             cursor: pointer;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
         }
 
     }

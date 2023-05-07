@@ -27,9 +27,9 @@ const About = () => {
     useEffect(() => {
 
         if (swipeRight) {
-            gsap.fromTo(about.current, {opacity: 1, x: origin}, {opacity: 0, x: '-100vw', display: 'none', duration: 1})
+            gsap.fromTo(about.current, {x: origin}, { x: '-100vw', display: 'none', duration: .7})
         } else {
-            gsap.fromTo(about.current, {opacity: 0,  x: '-100vw'}, {opacity: 1, x: 0, display: 'block', duration: 1})
+            gsap.fromTo(about.current, {x: '-100vw'}, {x: 0, display: 'block', duration: .7})
         }
 
     }, [swipeRight])
