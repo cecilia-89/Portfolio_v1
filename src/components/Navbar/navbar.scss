@@ -26,10 +26,10 @@ header {
             border: 1px solid index.$green;
             color: index.$green;
             padding:.5em .8em;
-            cursor: pointer;
 
             a {
                 color: inherit;
+                cursor: pointer;
                 text-decoration: none;
             }
         }

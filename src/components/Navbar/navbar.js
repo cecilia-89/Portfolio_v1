@@ -41,9 +41,9 @@ const Navbar = () => {
             <header ref={nav}>
                 <div className='wrapper'>
                     <div className='logo' onClick={() => dispatch(swipe())}>
-                        Logo
+                       logo
                     </div>
-               
+                    
                     <div className="resume" >
                         <a href='resume.pdf' target="_blank" rel="noreferrer"> Resume </a>
                     </div>

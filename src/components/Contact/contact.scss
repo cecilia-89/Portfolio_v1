@@ -4,6 +4,7 @@
 
     padding: 5em 1em;
     border-top: 1px solid rgba(0, 0, 0, 0.142);
+    position: relative;
 
     &>div:first-child {
 
@@ -86,6 +87,29 @@
                 }
             }
         
+        }
+    }
+
+    &>div:last-child {
+        width: 100%;
+        position: absolute;
+        opacity: 0;
+        top: 35%;
+
+        span {
+            font-size: 2em;
+        }
+
+        div {
+            width: fit-content;
+            background: rgb(222, 222, 222);
+            margin: 0 auto;
+            text-align: center;
+            padding: 1em;
+
+            p {
+                margin: 0;
+            }
         }
     }
 }
