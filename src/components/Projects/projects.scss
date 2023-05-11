@@ -2,7 +2,7 @@
 
 .projects {
     background: index.$primary-color;
-    // z-index: 3;
+    display: none;
     top: 60px;
 
     & > div:first-child {
@@ -18,7 +18,7 @@
         width: 15vw;
         height: 1px;
         margin: auto 30px;
-        background: index.$slate;
+        background: index.$gray;
     }
 
     & > div:first-child::after {
@@ -26,17 +26,17 @@
         width: 15vw;
         height: 1px;
         margin: auto 30px;
-        background: index.$slate;
+        background: index.$gray;
     }
 
     & > div:nth-child(2) {
         text-align: center;
-        color: index.$slate;
+        color: index.$gray;
         font-size: 1.8em;
         
         span {
             font-weight: 900;
-            color: index.$green;
+            color: index.$gray;
         }
     }
 
@@ -46,19 +46,34 @@
             display:flex;
             justify-content:space-between;
             align-items: center;
-            margin: 3.5em 0 6em 2em;
+            margin: 4em 0 6em 2em;
         
            .app-image {
                 position: relative;
+                width: 50vw;
                 border-radius: 10px;
                 box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 
                 img {
-                    width: 50vw;
+                    width: inherit;
+                    background: white;
                     border-radius: inherit;
                     display: block;
                 }
 
+            }
+
+            .app-image::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                background: index.$primary-color;
+                border-radius: inherit;
+                opacity: 0.4;
+                z-index: 2;
+                height: 100%;
+                display: block;
+                width: inherit;
             }
 
             .logos {
@@ -72,7 +87,9 @@
                 }
 
                 a {
-                    color: black;
+                    ion-icon {
+                        color: index.$secondary-color;
+                    }
                 }
             }
 
@@ -80,7 +97,9 @@
                 background: index.$primary-color;
                 background: rgba(255, 0, 0, 0);
                 text-align: right;
+                color: index.$secondary-color;
                 max-width: 35vw;
+                z-index: 3;
                 translate: -90px;
 
                 p {
@@ -88,8 +107,9 @@
                 }
 
                 &>div:nth-child(2) {
-                    background: gray;
+                    background: index.$gray;
                     border-radius: 10px;
+                    color: index.$primary-color;
                     text-align: left;
                     padding:.8em;
                     box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
@@ -100,6 +120,7 @@
                     padding: 0;
                     display: flex;
                     white-space:nowrap;
+                    color: index.$secondary-color;
                     justify-content: flex-end;
                     gap: 10px;
                 }
@@ -135,7 +156,7 @@
         .description {
             translate: 0 0;
             max-width: none;
-            padding: 0 2em;
+            padding: 0 .5em;
             text-align: left;
             z-index: 1;
     

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { swipe } from '../../actions';
 import Projects from '../Projects/projects'
 import  gsap from 'gsap';
-import ME from '../About/images/cecilia.png'
+import ME from '../About/images/cecilia.JPG'
 
 
 const About = () => {
@@ -20,7 +20,7 @@ const About = () => {
     
     const handleChange = () => {
         setState(!state);
-        gsap.fromTo(info.current, {y: 100}, {y: -20, duration: 1})
+        gsap.fromTo(info.current, {y: 100}, {y: -50, duration: 1})
         gsap.fromTo(more.current, {opacity: 1}, {opacity: 0, transform: 'scale(0)', height: '0'})
     }
 

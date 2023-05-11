@@ -2,6 +2,8 @@ import './contact.scss'
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { useForm } from '@formspree/react';
+const send = new Audio('mixkit-arcade-game-jump-coin-216.wav')
+send.volume = 0.5
 
 const Contact = () => {
     const contact = useRef(null)
@@ -12,11 +14,15 @@ const Contact = () => {
     if (state.submitting) {
         form.current.reset();
         
-        gsap.fromTo(message.current, {opacity: 0, y: 15}, {opacity: 1, y: origin, duration: 1})
+        gsap.fromTo(message.current, {display: 'none', opacity: 0, y: 15}, {display: 'block', opacity: 1, y: origin, duration: 1})
 
         setTimeout(() => {
-            gsap.fromTo(message.current, {opacity: 1, y: origin}, {duration: 1, opacity: 0, y:15})
+            gsap.fromTo(message.current, {opacity: 1, y: origin, display: 'block'}, {duration: 1, opacity: 0, y:15, display: 'none'})
         }, 1500)
+    }
+
+    const play = () => {
+        if (state.submitting) send.play()
     }
 
     return (
@@ -41,10 +47,10 @@ const Contact = () => {
                     </div>
 
                     <div>
-                        <textarea placeholder='Enter your message' name='message'></textarea>
+                        <textarea placeholder='Enter your message' name='message' required></textarea>
                     </div>
 
-                    <div><button  type="submit" disabled={state.submitting} >Send</button></div>
+                    <div><button type="submit" disabled={state.submitting} onClick={play()}>Send</button></div>
                 </form>
             </div>
 

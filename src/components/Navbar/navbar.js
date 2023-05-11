@@ -4,6 +4,8 @@ import { swipe } from '../../actions/index.js';
 import gsap from 'gsap';
 import About from '../About/about.js'
 import './navbar.scss'
+const audio = new Audio('mixkit-paper-slide-1530.wav')
+audio.volume = 0.3
 
 const Navbar = () => {
 
@@ -40,7 +42,7 @@ const Navbar = () => {
         <>
             <header ref={nav}>
                 <div className='wrapper'>
-                    <div className='logo' onClick={() => dispatch(swipe())}>
+                    <div className='logo' onClick={() => {dispatch(swipe()); audio.play()}}>
                        logo
                     </div>
                     

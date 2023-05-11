@@ -1,8 +1,8 @@
 @use '../../index.scss';
 
 .contact-wrapper {
-
-    padding: 5em 1em;
+    padding: 3em 1em;
+    margin-top: 3em;
     border-top: 1px solid rgba(0, 0, 0, 0.142);
     position: relative;
 
@@ -16,6 +16,8 @@
 
         p {
             font-size: 1.2em;
+            margin-top: .5em;
+            margin-bottom: 1.8em;
         }
     }
 
@@ -48,6 +50,10 @@
                         border: 0;
                         padding: 0;
                         height: 5vh; 
+                    }
+
+                    input:focus {
+                        background: transparent;
                     }
                 }
             }
@@ -83,7 +89,7 @@
                 button:hover {
                     color: white;
                     cursor: pointer;
-                    background: black;
+                    background: index.$secondary-color;
                 }
             }
         
@@ -93,7 +99,7 @@
     &>div:last-child {
         width: 100%;
         position: absolute;
-        opacity: 0;
+        display: none;
         top: 35%;
 
         span {
@@ -119,7 +125,8 @@
     .contact-wrapper {
         display: flex;
         gap: 50px;
-        margin: auto;
+        margin-top: 10em;
+        padding-top: 5em;
         padding-left: 2em;
         padding-right: 2em;
         position: relative;

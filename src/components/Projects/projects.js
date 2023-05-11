@@ -12,7 +12,6 @@ const Projects = () => {
     const projects = useRef(null)
     const swipeRight = useSelector(state => state.Swipe)
     useEffect(() => {
-        console.log(swipeRight)
        
         if (swipeRight) {
             gsap.fromTo(projects.current, {x: '100vw'}, {x:'0',  display: 'block', duration: 1})

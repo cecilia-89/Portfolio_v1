@@ -1,7 +1,6 @@
 @use '../../index.scss';
 
 header {
-    color: index.$secondary-color;
     background: index.$primary-color;
     transition: .3s;
     overflow-x: hidden;
@@ -18,20 +17,32 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        .logo {
+            color: index.$secondary-color;
+        }
+
         .logo:hover {
             cursor: pointer;
         }
     
         .resume {
-            border: 1px solid index.$green;
-            color: index.$green;
+            border: 1px solid index.$secondary-color;
+            font-weight: 500;
+            cursor: pointer;
+            color: index.$secondary-color;
             padding:.5em .8em;
+            transition: 0.30s;
 
             a {
                 color: inherit;
                 cursor: pointer;
                 text-decoration: none;
             }
+        }
+
+        .resume:hover {
+            border-right: 7px solid index.$secondary-color;
+            // border-bottom: 4px solid index.$secondary-color;
         }
 
     }

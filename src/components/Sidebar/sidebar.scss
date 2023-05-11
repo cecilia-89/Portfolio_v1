@@ -8,7 +8,7 @@
     ul {
         list-style: none;
         display: flex;
-        color: index.$secondary-color;
+        color: index.$gray;
         flex-direction: column;
         gap: 20px;
         margin: 0;
@@ -24,14 +24,14 @@
             & > a {
                 color: black;
 
-                ion-icon {
+                ion-icon, svg {
                     font-size: 25px;
+                    color: index.$gray;
                     transition: 0.30s;
                 }
 
-                img {
+                svg {
                     width: 25px;
-                    transition: 0.30s;
                 }
         
              }
@@ -43,7 +43,7 @@
                 font-size: 28px;
             }
 
-            img {
+            svg {
                 width: 28px;
             }
         }
