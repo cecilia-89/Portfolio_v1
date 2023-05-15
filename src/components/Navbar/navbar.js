@@ -2,10 +2,18 @@ import { useState, useEffect, useRef} from 'react';
 import { useDispatch, useSelector} from 'react-redux'
 import { swipe } from '../../actions/index.js';
 import gsap from 'gsap';
+import logo from './images/logo.png'
 import About from '../About/about.js'
 import './navbar.scss'
 const audio = new Audio('mixkit-paper-slide-1530.wav')
 audio.volume = 0.3
+
+const play = () => {
+    setTimeout(() => {
+        audio.play()
+    }, window.pageYOffset);
+}
+
 
 const Navbar = () => {
 
@@ -42,8 +50,8 @@ const Navbar = () => {
         <>
             <header ref={nav}>
                 <div className='wrapper'>
-                    <div className='logo' onClick={() => {dispatch(swipe()); audio.play()}}>
-                       logo
+                    <div className='logo' onClick={() => {dispatch(swipe()); play()}}>
+                       <img src={logo} alt='logo' />
                     </div>
                     
                     <div className="resume" >

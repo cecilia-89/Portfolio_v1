@@ -1,17 +1,22 @@
-$primary-color: #1d1d20;
-$secondary-color: #edecec;
-$lightest-slate: #d1d1d1;
-$gray: #8e8e8e;
+$primary-color: #121023;
+$secondary-color: #64e3ff;
+$lightest-slate: #d4dcf8;
+$light-navy: #112240;
+$gray: #92a1cc;
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior:smooth;
+  transition: .30s
+}
 
 body {
   margin: 0;
   background: $primary-color;
-  font-family: kanit, sans-serif;
+  font-family: kanit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
