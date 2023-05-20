@@ -8,31 +8,13 @@ import gsap from 'gsap'
 const Projects = () => {
     gsap.registerPlugin()
     const wrapper = useRef(null)
-    const projects = []
+    const refs = useRef([])
     const swipeRight = useSelector(state => state.Swipe)
-
-
-    // const observer = new IntersectionObserver(entries => {
-    //     entries.forEach(entry => {
-    //         const intersecting = entry.isIntersecting
-    //         if (intersecting) {
-    //             gsap.fromTo(entry.target, {opacity: 0, y: 50}, {opacity: 1, y:origin, duration: 1, delay: 1})
-    //         }
-    //     })
-    // })
-
-    // projects.forEach(project => {
-    //     observer.observe(project)
-    // })
-
-
 
     useEffect(() => {
         const isTop = window.pageYOffset === 0;
         const slideRight = {x:'0',  display: 'block', duration: 1}
         const slideLeft = {x:'100vw', display: 'none', duration: 1}
-
-        console.log(window.pageYOffset)
 
         if (!isTop) {
             slideRight.delay = .5
@@ -48,39 +30,53 @@ const Projects = () => {
 
     }, [swipeRight]) 
 
+    useEffect(() => {
+
+        const observerFunc = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    console.log(true)
+                    gsap.to(entry.target, {opacity: 1, duration: .9, delay: 1, y:0})
+                }
+            })
+        }
+
+        const observer = new IntersectionObserver(observerFunc)
+        refs.current.forEach(ref => {
+            observer.observe(ref)
+        })
+    }, [])
+
     return (
         <section ref={wrapper} className={"projects"}>
-            <div>Projects</div>
-            <div>Few projects I've worked on this past year <span>.</span></div>
+            <div> <span>/</span> projects<span>.</span></div>
+            <div>Few projects I've worked on this past year</div>
 
             <div className="project-wrapper">
-                {work.map((project) => {
-                return  <div ref={el => projects.push(el)}>
+                {work.map((project, index) => (
+                <div key={index}
+                     ref={el => refs.current.push(el)}>
                     <div className='app-image'>
                         <img src={project.image} alt='movie site for Nigerian movies'/>
                     </div>
-
                     <div className='description'>
                         <p>{project.title}</p>
                         <div>{project.summary}</div>
-
                         <ul>
                             {project.skills.map((skill) => {
-                                return <li>{skill}</li>
+                                return <li key={skill}>{skill}</li>
                             })}
                         </ul>
-
                         <div className='logos'>
                             {project.links.map((link) => {
-                                return  <a href={link.url} target='_blank' rel="noreferrer">
+                                return  <a key={link.url} href={link.url} target='_blank' rel="noreferrer">
                                             <ion-icon name={link.logo}></ion-icon>
                                         </a>
                             })}
-                        
                         </div>
                     </div>
-                        </div>
-                })}
+                </div>
+                ))}
             </div>
             <Contact /> 
         </section>

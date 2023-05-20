@@ -1,6 +1,7 @@
 export const work = [
     
     {
+        
         title: 'Chatt',
         image: 'images/chatt.png',
         summary: 'An instant messaging web app where you can chat with friends and loved ones. For our final project in the ALX program, I and my partner decided to use a MERN stack to build a real time messaging app, with socket.io as a third party service.',

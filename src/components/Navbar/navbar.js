@@ -1,24 +1,16 @@
 import { useState, useEffect, useRef} from 'react';
 import { useDispatch, useSelector} from 'react-redux'
 import { swipe } from '../../actions/index.js';
+import { play } from '../../actions/index.js';
+import { animate } from '../../actions/index.js'
 import gsap from 'gsap';
 import logo from './images/logo.png'
 import About from '../About/about.js'
 import './navbar.scss'
-const audio = new Audio('mixkit-paper-slide-1530.wav')
-audio.volume = 0.3
-
-const play = () => {
-    setTimeout(() => {
-        audio.play()
-    }, window.pageYOffset);
-}
-
 
 const Navbar = () => {
 
     const dispatch = useDispatch()
-
     let [lastScroll, setScroll] = useState()
     const swipeRight = useSelector(state => state.Swipe)
     const nav = useRef()
@@ -50,7 +42,7 @@ const Navbar = () => {
         <>
             <header ref={nav}>
                 <div className='wrapper'>
-                    <div className='logo' onClick={() => {dispatch(swipe()); play()}}>
+                    <div className='logo' onClick={() => {dispatch(swipe()); dispatch(play()); dispatch(animate())}}>
                        <img src={logo} alt='logo' />
                     </div>
                     

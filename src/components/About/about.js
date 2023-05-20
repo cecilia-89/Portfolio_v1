@@ -2,6 +2,7 @@ import './about.scss'
 import { useState, useRef, useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { swipe } from '../../actions';
+import { play } from '../../actions';
 import Projects from '../Projects/projects'
 import  gsap from 'gsap';
 import ME from '../About/images/cecilia.JPG'
@@ -15,7 +16,6 @@ const About = () => {
 
     const [state, setState] = useState(false)
     const swipeRight = useSelector(state => state.Swipe)
-    
     
     const handleChange = () => {
         setState(!state);
@@ -44,7 +44,6 @@ const About = () => {
     }, [swipeRight])
 
     return (
-        
         <div className='container'>
             <article ref={about}>
                 <div className='about'>
@@ -141,7 +140,7 @@ const About = () => {
                         while simultaneously making meaningful contributions to the dynamic and constantly evolving realm of web development.
                     </p> 
 
-                    <div onClick={() => dispatch(swipe())} className='my-projects'>
+                    <div onClick={() => {dispatch(swipe()); dispatch(play())}} className='my-projects'>
                         <div><button>PROJECTS</button></div>
                         <div className='icon'><ion-icon name="arrow-forward"></ion-icon></div>
                     </div>
