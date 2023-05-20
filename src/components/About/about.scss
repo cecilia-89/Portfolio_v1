@@ -243,7 +243,6 @@
 
         article:first-child {
             top: 100px;
-            padding-bottom: 80px;
 
             .know-more {
                 margin-top: 6em;
@@ -253,6 +252,7 @@
 
             .info {
                 text-align: left;
+                width: 100%;
             }
         
             .about {

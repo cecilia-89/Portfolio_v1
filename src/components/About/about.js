@@ -2,6 +2,7 @@ import './about.scss'
 import { useState, useRef, useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { swipe } from '../../actions';
+import Footer from '../Footer/footer'
 import { play } from '../../actions';
 import Projects from '../Projects/projects'
 import  gsap from 'gsap';
@@ -144,11 +145,12 @@ const About = () => {
                         <div><button>PROJECTS</button></div>
                         <div className='icon'><ion-icon name="arrow-forward"></ion-icon></div>
                     </div>
-                    
                 </div>
+                <Footer />
             </article>
 
             <Projects />
+
         </div>
      );
 }

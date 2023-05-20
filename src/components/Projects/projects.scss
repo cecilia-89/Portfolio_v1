@@ -22,22 +22,6 @@
         }
     }
 
-    // & > div:first-child::before {
-    //     content: "";
-        
-    //     width: 15vw;
-    //     height: 1px;
-    //     margin: auto 30px;
-    //     background: index.$lightest-slate;
-    // }
-
-    // & > div:first-child::after {
-    //     content: "";
-    //     width: 15vw;
-    //     height: 1px;
-    //     margin: auto 30px;
-    //     background: index.$lightest-slate;
-    // }
 
     & > div:nth-child(2) {
         text-align: center;
@@ -155,41 +139,45 @@
 }
 
 @media (max-width: 767px) {
-    .projects .project-wrapper > * {
-        display: block;
-        margin-left: 0;
+    .projects {
         
-        .app-image {
-            width: fit-content;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-
-            img {
-                width: 300px;
-            }
-        }
-
-        .description {
-            translate: 0 0;
-            max-width: none;
-            padding: 0 .5em;
-            text-align: left;
-            z-index: 1;
+        .project-wrapper > * {
+            display: block;
+            margin-left: 0;
+            
+            .app-image {
+                width: fit-content;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
     
-            p {
-                margin: 5px 0;
+                img {
+                    width: 300px;
+                }
             }
-
-            > div:nth-child(2) {
-                padding-top: .8em;
-            }
-
-            ul {
-                flex-wrap: wrap;
+    
+            .description {
+                translate: 0 0;
+                max-width: none;
+                padding: 0 .5em;
+                text-align: left;
+                z-index: 1;
+        
+                p {
+                    margin: 5px 0;
+                }
+    
+                > div:nth-child(2) {
+                    padding-top: .8em;
+                }
+    
+                ul {
+                    flex-wrap: wrap;
+                }
             }
         }
     }
+   
 }
 
 @media (max-width: 767px) and (min-width: 400px) {

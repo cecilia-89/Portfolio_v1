@@ -3,6 +3,7 @@
 .sidebar {
     position: fixed;
     left: -10px;
+    z-index: 1;
     bottom: 0;
     
     ul {

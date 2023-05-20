@@ -1,0 +1,56 @@
+@use '../../index.scss';
+
+footer {
+    display: none;
+    padding: 15px 0;
+    width: 100%;
+    font-size:.9em;
+    background: index.$primary-color;
+    border-top: 1px solid #92a2cc2c;
+    margin: 0 auto;
+    color: index.$gray;
+    bottom: 0;
+    
+    div {
+        text-align: right;
+        width: 80%;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        color: index.$lightest-slate;
+        gap: 20px;
+        margin: 0;
+        width: 100%;
+        padding:0;
+        justify-content:flex-start;
+
+        li {
+            font-size: 20px;
+
+            ion-icon {
+                color: index.$gray;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    footer {
+        display: flex;
+        align-self: center;
+        margin-top: 4em;
+        justify-content: space-between;
+
+        div {
+            padding-bottom: 0;
+        }
+
+        ul {
+            display: flex;
+        }
+    }
+}

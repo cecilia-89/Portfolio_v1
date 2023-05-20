@@ -1,5 +1,6 @@
 import './projects.scss'
 import Contact from '../Contact/contact'
+import Footer from '../Footer/footer'
 import { work }from '../../utils/projects'
 import { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
@@ -79,6 +80,7 @@ const Projects = () => {
                 ))}
             </div>
             <Contact /> 
+            <Footer />
         </section>
     );
 }
