@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "http://cecilia-89.github.io/Portfolio_v1",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
