@@ -50,7 +50,7 @@ const Projects = () => {
 
     return (
         <section ref={wrapper} className={"projects"}>
-            <div> <span>/</span> projects<span>.</span></div>
+            <div>projects</div>
             <div>Few projects I've worked on this past year</div>
 
             <div className="project-wrapper">

@@ -203,16 +203,16 @@
 @media (max-width: 320px) {
     .projects {
 
-        top: 150px;
+        top: 100px;
 
         &>div:nth-child(2) {
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
 
         .project-wrapper > * {
         
             .app-image img {
-                    width: 250px;
+                    width: 230px;
                 }
             
             .description {

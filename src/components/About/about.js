@@ -52,7 +52,7 @@ const About = () => {
                         <div>Hey there &#128075;&#127998;, I'm</div>
                         <h1>Cecilia Atabong</h1>
                         <div>
-                            <h2>Software Engineer <span>.</span></h2>
+                            <h2>Software Engineer</h2>
                         </div>
                         <p>I'm a full-stack developer, 
                             whose  motivation lies in the crafting of digital experiences that

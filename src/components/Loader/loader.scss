@@ -36,3 +36,9 @@
         }
     }
 }
+
+@media (max-width: 363px) {
+    .loader > div {
+        flex-direction: column;
+    }
+}

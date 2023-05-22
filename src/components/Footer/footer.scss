@@ -19,22 +19,23 @@ footer {
     ul {
         display: flex;
         list-style: none;
+        align-items: center;
         color: index.$lightest-slate;
         gap: 20px;
         margin: 0;
         width: 100%;
         padding:0;
-        justify-content:flex-start;
+        
 
         li {
-            font-size: 20px;
+            font-size: 22px;
 
             ion-icon {
                 color: index.$gray;
             }
 
-            img {
-                width: 20px;
+            svg {
+                width: 25px;
             }
         }
     }
@@ -45,7 +46,7 @@ footer {
 
     footer {
         display: flex;
-        align-self: center;
+        align-items: center;
         margin-top: 4em;
         justify-content: space-between;
 
@@ -57,4 +58,29 @@ footer {
             display: flex;
         }
     }
+}
+
+@media (max-width: 363px) {
+    footer {
+        
+        div {
+            display: none;
+        }
+    
+        ul {
+            justify-content: center;
+
+            ion-icon {
+                font-size: 18.5px;
+            }
+
+            li {
+                svg {
+                    width: 22px;
+                }
+
+            }
+        }
+    }
+    
 }

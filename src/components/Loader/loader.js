@@ -7,13 +7,23 @@ const Loader = () => {
     const portfolio = useRef()
     const text = useRef()
     const loader = useRef()
+    const mobile  = window.innerWidth
+
 
     useEffect(() => {
+
+        let[ initial, final] = [{x: '-120px'}, {x: 0}]
+       
+        if (mobile <= 363) {
+            [initial, final] = [{y: '-50px'}, {y: 0}]
+        }
+       
         gsap.to(name.current, {scale: 1, duration: .8})
-        gsap.fromTo(text.current, {scale: 1}, {scale: 0, duration: 1, delay: 2.5})
-        gsap.fromTo(portfolio.current, {x: '-120px'}, {x: 0, opacity: 1, duration: 1, delay: 1})
+        gsap.fromTo(text.current, {scale: 1}, {scale: 0, duration: 1, delay: 2.5})       
+        gsap.fromTo(portfolio.current, initial, {...final, opacity: 1, duration: 1, delay: 1})
         gsap.fromTo(loader.current, {y: '0vh', display: 'flex'}, {y: '-100vh', display: 'none', duration: .8, delay: 3.5})
-    }, [])
+
+    }, [mobile])
 
     return ( 
         <section ref={loader} className='loader'>

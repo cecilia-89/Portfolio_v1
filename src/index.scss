@@ -13,6 +13,11 @@ html {
   transition: .30s
 }
 
+html, body {
+  scrollbar-width:thin;
+  scrollbar-color: #40485f $primary-color; 
+}
+
 body {
   margin: 0;
   background: $primary-color;
@@ -20,6 +25,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  scrollbar-width:thin;
+  scrollbar-color: #40485f $primary-color; 
+}
+
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: $primary-color;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #40485f;  /* color of the scroll thumb */     /* roundness of the scroll thumb */ /* creates padding around scroll thumb */
 }
 
 code {
