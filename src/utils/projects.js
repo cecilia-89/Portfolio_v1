@@ -33,18 +33,18 @@ export const work = [
     },
 
     {
-        title: 'Omni',
-        image: 'images/omni.png',
-        summary: 'A movie streaming service for Nigerian Movies. For my ALX foundations project I decided to build a platform dedicated to streaming a few of my favourite Nigerian movies.',
+        title: 'Echo',
+        image: 'images/echo.png',
+        summary: 'A simple Landing page for a video conferencing platform that provides virtual meetings and webinars.',
 
-        skills: ['Flash', 'mySQL', 'Javascript', 'HTML', 'CSS', 'Python anywhere'],
+        skills: ['ReactJS', 'Vercel', 'MailJS'],
         links: [
             { 
-                url: 'https://cecilia89.pythonanywhere.com/home', 
+                url: 'https://echo-green-kappa.vercel.app/', 
                 logo:"open-outline" }, 
 
             {
-                url: 'https://github.com/cecilia-89/omni',
+                url: 'https://github.com/cecilia-89/Echo',
                 logo: "logo-github"
             }
         ]
