@@ -42,7 +42,10 @@ const Navbar = () => {
         <>
             <header ref={nav}>
                 <div className='wrapper'>
-                    <div className='logo' onClick={() => {dispatch(swipe()); dispatch(play()); dispatch(animate())}}>
+                    <div className='logo' onClick={() => { 
+                        dispatch(swipe()); 
+                        dispatch(play()); 
+                        dispatch(animate())}}>
                        <img src={logo} alt='logo' />
                     </div>
                     

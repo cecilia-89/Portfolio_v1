@@ -151,7 +151,6 @@
             display: block;
             width: 80vw;
             margin: 0 auto;
-            text-align: justify;
             color: index.$gray;
 
             &>div:last-child {
@@ -185,8 +184,7 @@
                 }
 
             }
-        }
-    }
+        }}
 }
 
 .hide {
@@ -284,7 +282,7 @@
                 }
 
                 .image-wrapper {
-                    margin: 4em auto;
+                    margin: 100px auto;
                 }
             }
 

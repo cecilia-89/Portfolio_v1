@@ -18,7 +18,7 @@ const Projects = () => {
         const slideLeft = {x:'100vw', display: 'none', duration: 1}
 
         if (!isTop) {
-            slideRight.delay = .5
+            slideRight.delay = .8
             slideLeft.delay = .8
         }
 
@@ -36,8 +36,7 @@ const Projects = () => {
         const observerFunc = (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    console.log(true)
-                    gsap.to(entry.target, {opacity: 1, duration: .9, delay: 1, y:0})
+                    gsap.to(entry.target, {opacity: 1, duration: .9, delay: 1, y:'20px'})
                 }
             })
         }
@@ -50,16 +49,14 @@ const Projects = () => {
 
     return (
         <section ref={wrapper} className={"projects"}>
-            <div>projects</div>
-            <div>Few projects I've worked on this past year</div>
+            <div>Projects</div>
+            <div>Few projects I've worked on this past year.</div>
 
             <div className="project-wrapper">
                 {work.map((project, index) => (
                 <div key={index}
                      ref={el => refs.current.push(el)}>
-                    <div className='app-image'>
-                        <img src={project.image} alt='movie site for Nigerian movies'/>
-                    </div>
+
                     <div className='description'>
                         <p>{project.title}</p>
                         <div>{project.summary}</div>
@@ -75,6 +72,10 @@ const Projects = () => {
                                         </a>
                             })}
                         </div>
+                    </div>
+
+                    <div className='app-image'>
+                        <img src={project.image} alt='movie site for Nigerian movies'/>
                     </div>
                 </div>
                 ))}

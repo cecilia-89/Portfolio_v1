@@ -6,7 +6,7 @@ import Footer from '../Footer/footer'
 import { play } from '../../actions';
 import Projects from '../Projects/projects'
 import  gsap from 'gsap';
-import ME from '../About/images/cecilia.JPG'
+import ME from '../About/images/cecilia.jpg'
 
 const About = () => {
 
@@ -24,14 +24,15 @@ const About = () => {
         gsap.fromTo(more.current, {opacity: 1}, {opacity: 0, transform: 'scale(0)', height: '0'})
     }
 
+
     useEffect(() => {
-        const isTop = window.pageYOffset === 0;
+        const isTop = window.scrollY === 0;
         const slideRight = { x: '-100vw', display: 'none', duration: 1}
         const slideLeft = {x: 0, display: 'block', duration: 1}
 
         if (!isTop) {
-            slideRight.delay = .5
-            slideLeft.delay = .8
+            slideRight.delay = .7
+            slideLeft.delay = 1
         }
 
         if (swipeRight) {
@@ -43,6 +44,7 @@ const About = () => {
         }
 
     }, [swipeRight])
+
 
     return (
         <div className='container'>
@@ -124,7 +126,7 @@ const About = () => {
                     <div className='icon'>
                         <ion-icon name="arrow-down"></ion-icon>
                     </div>
-                    <button onClick={handleChange}><div>KNOW MORE</div></button>
+                    <button className='button' onClick={handleChange}><div>KNOW MORE</div></button>
                 </div>
 
                 <div ref={info} className={state ? 'info': 'hide'}>
@@ -141,7 +143,7 @@ const About = () => {
                         while simultaneously making meaningful contributions to the dynamic and constantly evolving realm of web development.
                     </p> 
 
-                    <div onClick={() => {dispatch(swipe()); dispatch(play())}} className='my-projects'>
+                    <div onClick={() => {dispatch(swipe()); dispatch(play())}} className='button'>
                         <div><button>PROJECTS</button></div>
                         <div className='icon'><ion-icon name="arrow-forward"></ion-icon></div>
                     </div>

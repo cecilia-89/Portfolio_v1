@@ -1,6 +1,6 @@
 const play = (state = null, action) => {
     let timeout = 1000;
-    if (window.pageYOffset === 0) timeout = 0;
+    if (window.scrollY === 0) timeout = 0;
 
     switch(action.type) {
         case "PLAY":

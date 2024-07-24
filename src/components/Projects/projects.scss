@@ -7,7 +7,8 @@
 
     & > div:first-child {
         color: index.$lightest-slate;
-        font-size: 1.85em;
+        font-size: 2.5em;
+        font-weight: 500;
         display: flex;
         width: fit-content;
         margin: 0 auto;
@@ -37,26 +38,34 @@
 
     .project-wrapper {
         display: flex;
-        gap:130px;
+        gap:120px;
+        margin-left: 80px;
         flex-direction: column;
 
         &>* {
-            display:flex;
-            justify-content:space-between;
+            display:grid;
+            position: relative;
+            gap: 10px;
+            grid-template-columns: repeat(1, 1fr);
             align-items: center;
             opacity: 0;
-            transform: translateY(100px);
-            margin-left:.5em;          
+            transform: translateY(100px);       
         
            .app-image {
                 position: relative;
-                width: 58vw;
-                border-radius: 10px;
+                grid-area: 1 / 1 / -1 / 7;
+                position: relative;
+                aspect-ratio: 16/9;
+                max-width: 700px;
+                border-radius: 5px;
                 background: rgb(114, 171, 194);
                 box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 
                 img {
-                    width: inherit;
+                    max-width: 100%;
+                    object-fit: cover;
+                    height: 100%;
+                    object-position: left top;
                     background: white;
                     mix-blend-mode:multiply;
                     border-radius: inherit;
@@ -97,10 +106,12 @@
 
             .description {
                 text-align: right;
+                position: relative;
+                grid-area: 1 / 5 / -1 / -1;
                 color: index.$lightest-slate;
                 max-width: 35vw;
                 z-index: 3;
-                translate: -90px;
+
 
                 p {
                     font-size: 1.7em;
@@ -143,6 +154,7 @@
         
         .project-wrapper > * {
             display: block;
+            gap: 160px;
             margin-left: 0;
             
             .app-image {
@@ -159,7 +171,6 @@
             .description {
                 translate: 0 0;
                 max-width: none;
-                padding: 0 .5em;
                 text-align: left;
                 z-index: 1;
         
@@ -183,7 +194,7 @@
 @media (max-width: 767px) and (min-width: 400px) {
     .projects .project-wrapper > * {
         width: 90%;
-        margin: 3em auto;
+        margin: 0 auto;
 
         .app-image {
             width: 100%;

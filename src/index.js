@@ -15,7 +15,6 @@ const store = createStore(allReducers, applyMiddleware(thunk));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
     <Provider store={store}>
       <Navbar />
       <Sidebar />
