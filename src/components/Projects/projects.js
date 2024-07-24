@@ -56,6 +56,9 @@ const Projects = () => {
                 {work.map((project, index) => (
                 <div key={index}
                      ref={el => refs.current.push(el)}>
+                    <div className='app-image'>
+                        <img src={project.image} alt='movie site for Nigerian movies'/>
+                    </div>
 
                     <div className='description'>
                         <p>{project.title}</p>
@@ -74,9 +77,6 @@ const Projects = () => {
                         </div>
                     </div>
 
-                    <div className='app-image'>
-                        <img src={project.image} alt='movie site for Nigerian movies'/>
-                    </div>
                 </div>
                 ))}
             </div>

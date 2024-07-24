@@ -46,7 +46,7 @@
             display:grid;
             position: relative;
             gap: 10px;
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(12, 2fr);
             align-items: center;
             opacity: 0;
             transform: translateY(100px);       
@@ -108,6 +108,7 @@
                 text-align: right;
                 position: relative;
                 grid-area: 1 / 5 / -1 / -1;
+                grid-column: 7 / -1;
                 color: index.$lightest-slate;
                 max-width: 35vw;
                 z-index: 3;
@@ -151,6 +152,10 @@
 
 @media (max-width: 767px) {
     .projects {
+
+        .project-wrapper {
+            margin-left: 0;
+        }
         
         .project-wrapper > * {
             display: block;
