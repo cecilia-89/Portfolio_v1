@@ -36,7 +36,7 @@ const Projects = () => {
         const observerFunc = (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    gsap.to(entry.target, {opacity: 1, duration: .9, delay: 1, y:'20px'})
+                    gsap.to(entry.target, {opacity: 1, duration: .7, delay: .5, y:'20px'})
                 }
             })
         }
