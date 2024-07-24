@@ -107,8 +107,7 @@
             .description {
                 text-align: right;
                 position: relative;
-                grid-area: 1 / 5 / -1 / -1;
-                grid-column: 7 / -1;
+                grid-area: 1 / 6 / -1 / -1;
                 color: index.$lightest-slate;
                 max-width: 35vw;
                 z-index: 3;
@@ -120,7 +119,7 @@
 
                 &>div:nth-child(2) {
                     background: index.$light-navy;
-                    border-radius: 10px;
+                    border-radius: 5px;
                     color: index.$lightest-slate;
                     text-align: left;
                     padding:.8em;
